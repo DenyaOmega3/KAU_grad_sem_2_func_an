@@ -73,9 +73,28 @@
 \begin{document}
 \maketitle
 \newpage
-\tableofcontents
-\newpage
+%\tableofcontents
+%\newpage
+\subsection{Деякі вступні слова}
+Деякі означення зі загальної топології, метричних просторів, лінійної алгебри та теорії міри вважатимуться відомими.
+
 \begin{definition}
-Нульове означення
+Задано $E$ -- векторний простір над полем $k$ (у рамках даного курсу переважно будуть поля $\mathbb{R}, \mathbb{C}$).\\
+Векторний простір $E$ буде \textbf{топологічним}, якщо
+\begin{align*}
+\text{1) задана стандартна топологія на полі } k \\
+\text{2) операції $+ \colon E \times E \to E$ (додавання) та $\cdot \colon k \times E \to E$ (множення на скаляр) -- неперервні }
+\end{align*}
 \end{definition}
+\noindent
+Мабуть, варто розписати детально, що ми матимемо в такому разі. Тимчасово позначу додавання за відображення $\text{add} \colon E \times E \to E$ та множення на скаляр за відображення $\text{scalar} \colon k \times E \to E$.\\
+Оберемо будь-яку точку $(x,y) \in E \times E$. Тоді на ній $\text{add}$ неперервне, тобто $\forall U$ -- відкритий окіл $\text{add}(x,y): \exists V$ -- відкритий окіл точки $(x,y): \text{add}(V) \subset U$. Зауважимо, що для $V$ -- відкритого окола $(x,y)$ -- існують відкриті околи $V_x,V_y$, для яких $V_x \times V_y \subset V$. Далі, в нашому випадку $\text{add}(U) = \{ \text{add}(x,y) \mid (x,y) \in V \} = \{x+y \mid (x,y) \in V\} \supset \{x'+y' \mid x' \in V_x, y' \in V_y\} \overset{\text{позн.}}{=} V_x + V_y$.
+\bigskip \\
+Таким чином, $\forall U_{x+y}$ -- відкритий окіл $x+y: \exists V_x,V_y$ -- відкриті околи $x,y: V_x + V_y \subset U_{(x,y)}$.\\
+Аналогічно $\forall U_{\lambda x}$ -- відкритий окіл $\lambda x: \exists V_\lambda, V_x$ -- відкриті околи $\lambda, x: V_\lambda \times V_x \subset U_{\lambda x}$.
+
+\begin{remark}
+Для топологічного векторного простору достатньо визначити окіл точки $0$.\\
+Дійсно, всі інші околи $U_x \cong U_0$. В одну сторону в нас неперервне відображення $y \mapsto y+x$, а в іншу сторону -- теж неперервне $y \mapsto y - x$.
+\end{remark}
 \end{document}
