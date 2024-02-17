@@ -123,4 +123,21 @@
 Якщо $E$ -- лінійний нормований простір, то $E$ -- автоматично лінійно топологічний простір.\\
 \textit{Задамо просто окіл нуля як $B_0(r) = \{ x \in E \mid \|x\| < r\}$.}
 \end{corollary}
+
+\begin{proposition}[Властивості норми]
+Задано $E$ -- лінійний норований простір. Тоді справедливо наступне:
+\begin{enumerate}[nosep,wide=0pt,label={\arabic*)}]
+\item $\| x -y \| \geq \left| \|x\| - \|y\| \right|$;
+\item Нехай задана послідовність $\{x_n, n \geq 1\} \subset E: x_n \to x$. Тоді $\| x_n \| \to \|x\|$ при $n \to \infty$.
+\end{enumerate}
+
+\begin{proof}
+Дещо я залишу без доведення:
+\begin{enumerate}[label={\arabic*)},wide=0pt]
+\item \textit{Вказівка: $\|x\| = \|x-y+y\|$ та $\|y\| = \|y-x+x\|$.}
+\item $x_n \to x$, тобто це означає $\|x_n - x\| \to 0$. Отже, завдяки властивості 1), отримаємо $0 \leq \left| \| x_n \| - \| x \| \right| \leq \|x_n-x\| \to 0$ при $n \to \infty$. Таким чином, $\| x_n \| \to \|x\|$.
+\end{enumerate}
+Всі властивості доведені.
+\end{proof}
+\end{proposition}
 \end{document}
