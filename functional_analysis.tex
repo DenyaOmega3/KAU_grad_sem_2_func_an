@@ -140,4 +140,22 @@
 Всі властивості доведені.
 \end{proof}
 \end{proposition}
+
+\begin{theorem}
+Задано $E$ -- лінійний нормований простір. Тоді існує лінійний нормований простір $\tilde{E}$, такий, що:
+\begin{enumerate}[nosep,wide=0pt,label={\arabic*)}]
+\item $E \subset \tilde{E}$ -- щільна;
+\item $(E, \| \cdot \|_E)$ та $(\tilde{E}, \| \cdot \|_{\tilde{E}})$ -- ізометричні;
+\end{enumerate}
+\textit{Поки без доведення.}
+\end{theorem}
+
+\begin{example}
+Розглянемо кілька прикладів лінійних нормованих просторів:
+\begin{enumerate}[nosep, wide=0pt, label={\arabic*)}]
+\item $\mathbb{C}^n$, \qquad $\|x\| = \sqrt{x_1^2 + \dots + x_n^2}$.
+\item $C([0,1])$, \qquad $\|f\| = \displaystyle\max_{t \in [0,1]} |f(t)|$.
+\item $X$ -- довільна множина, $M(X) = \{f \colon X \to \mathbb{C} \mid f \text{ -- обмежені на } X \}$, \qquad $\|f\| = \displaystyle\sup_{t \in X} |f(t)|$.
+\end{enumerate}
+\end{example}
 \end{document}
