@@ -184,6 +184,19 @@
 Задано $E$ -- передгільбертів простір. Тоді $|(x,y)|^2 \leq (x,x) (y,y)$.
 \end{theorem}
 
+\begin{proof}
+Маємо $(x,y) = |(x,y)|e^{i \varphi}$, де кут $\varphi = \arg (x+iy)$. Розглянемо вираз $(x+te^{i\varphi}y + x + t e^{i\varphi}y) \geq 0$, виконано $\forall t \in \mathbb{R}$. Розпишемо ліву частини за властивостями функціоналу - отримаємо:\\
+$(x,x)+(x,te^{i\varphi}y) + (te^{i\varphi}y,x)+(te^{i\varphi}y, te^{i\varphi}y)
+= (x,x) + \overline{t e^{i\varphi}}(x,y) + te^{i \varphi} (y,x) + te^{i \varphi} \overline{t e^{i\varphi}} (y,y) \boxed{=} \\ $
+Зауважимо, що $\overline{e^{i\varphi}} = e^{-i\varphi}$.\\
+$\boxed{=} (x,x) + te^{-i\varphi}(x,y) + te^{i\varphi}(y,x) + t^2(y,y) \boxed{=}$\\
+Далі оскільки $(x,y) = |(x,y)|e^{i \varphi}$, то звідси $e^{-i \varphi}(x,y) = |(x,y)|$.\\
+А також $e^{i\varphi}(y,x) = \overline{e^{-i\varphi}} \overline{(x,y)} = \overline{|(x,y)|} = |(x,y)|$.\\
+$\boxed{=} (x,x) + 2t|(x,y)| + t^2(y,y) \geq 0$.\\
+$D = 4|(x,y)|^2 - 4(x,x)(y,y) \leq 0$, оскільки нерівність завжди виконана.\\
+$\implies |(x,y)|^2 \leq (x,x)(y,y)$.
+\end{proof}
+
 \begin{remark}
 $|(x,y)|^2 \leq (x,x) (y,y) \iff y = \alpha x$.
 \end{remark}
