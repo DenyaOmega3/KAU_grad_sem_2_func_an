@@ -162,7 +162,7 @@
 \subsection{Гільбертові простори}
 \begin{definition}
 Задано $E$ -- векторний простір над полем $\mathbb{C}$.\\
-Простір називається \textbf{передгільбертовим}, якщо задано відображення $(\cdot,\cdot) \colon E \times E \to k$, що наизвається \textbf{скалярним добутком}, що задовольняє таким умовам:
+Простір називається \textbf{передгільбертовим}, якщо на просторі задано відображення $(\cdot,\cdot) \colon E \times E \to k$, що наизвається \textbf{скалярним добутком}, що задовольняє таким умовам:
 \begin{align*}
 1)\forall x \in E: (x,x) \geq 0, \text{ при цьому } (x,x) = 0 \iff x = 0 \\
 2)\forall x,y,z \in E, \forall \lambda,\mu \in L: (\lambda x + \mu y, z) = \lambda(x,z) + \mu(y,z) \\
@@ -170,4 +170,37 @@
 \end{align*}
 Цей же скалярний добуток можна визначати над полем $\mathbb{R}$.
 \end{definition}
+
+\begin{proposition}[Властивості скалярного добутку]
+Задано $E$ -- передгільбертів простір. Тоді справедливе наступне:
+\begin{enumerate}[nosep,wide=0pt,label={\arabic*)}]
+\item $(0,x) = 0$;
+\item $(x, \lambda y + \mu z) = \bar{\lambda}(x,y) + \bar{\mu}(x,z)$
+\end{enumerate}
+\textit{Вправа: довести.}
+\end{proposition}
+
+\begin{theorem}[Нерівність Коші-Буняковського]
+Задано $E$ -- передгільбертів простір. Тоді $|(x,y)|^2 \leq (x,x) (y,y)$.
+\end{theorem}
+
+\begin{remark}
+$|(x,y)|^2 \leq (x,x) (y,y) \iff y = \alpha x$.
+\end{remark}
+
+\begin{proposition}
+Задано $E$ -- передгільбертів простір. Тоді $E$ -- лінійний нормований простір із нормою $\|x\| = \sqrt{(x,x)}$.
+\end{proposition}
+
+\begin{proof}
+1) $\|x\| = \sqrt{(x,x)} \geq 0$ -- зрозуміло. Також  $\|x\| = \sqrt{(x,x)} = 0 \iff (x,x) = 0 \iff x = 0$.\\
+2) $\| \lambda x \| = \sqrt{(\lambda x, \lambda x)} = \sqrt{\lambda \bar{\lambda} (x,x)} = \sqrt{\lambda^2 (x,x)} = |\lambda| \|x\|$.\\
+3) $\|x+y\|^2 = (x+y,x+y) = (x,x) + (x,y) + (y,x) + (y,y) = \|x\|^2 + 2 \Re (x,y) + \|y\|^2 \leq \\ \leq \|x\|^2 + 2 |(x,y)| + \|y\|^2 \overset{\text{нер-ть К-Б}}{\leq} \|x\|^2 + 2 \sqrt{(x,x)} \sqrt{(y,y)} + \|y\|^2 = \|x\|^2 + 2 \|x\| \|y\| + \|y\|^2 = (\|x\| + \|y\|)^2$.\\
+$\implies \|x+y\| \leq \|x\| + \|y\|$.
+\end{proof}
+
+\begin{proposition}[Поляризаційна тотожність]
+Задано $E$ -- передгільбертів простір. Тоді\\
+$(x,y) = \dfrac{1}{4} \left( \|x+y\|^2 - \|x-y\|^2 + i \|x+iy\|^2 - i \|x-iy\|^2 \right)$.
+\end{proposition}
 \end{document}
